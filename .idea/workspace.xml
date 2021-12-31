@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31d75020-4b73-443c-b099-0a69678f9d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/city_distributed_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/url_test.py" afterDir="false" />
+    <list default="true" id="31d75020-4b73-443c-b099-0a69678f9d10" name="Default Changelist" comment="变更野怪资源点刷新规则">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/city_distributed.py" beforeDir="false" afterPath="$PROJECT_DIR$/city_distributed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/city_distributed_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/city_distributed_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoom_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_out.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +183,14 @@
       <option name="presentableId" value="Default" />
       <updated>1637544709582</updated>
     </task>
+    <task id="LOCAL-00001" summary="变更野怪资源点刷新规则">
+      <created>1640938833927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640938833927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,48 +207,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="变更野怪资源点刷新规则" />
+    <option name="LAST_COMMIT_MESSAGE" value="变更野怪资源点刷新规则" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="161" key="#Plugins" timestamp="1640862277507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="161" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1640862277507" />
-    <state width="919" height="466" key="DebuggerActiveHint" timestamp="1640870723465">
+    <state width="1081" height="466" key="DebuggerActiveHint" timestamp="1640946112008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="919" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1640870723465" />
-    <state width="1899" height="176" key="GridCell.Tab.0.bottom" timestamp="1640938745964">
+    <state width="1081" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1640946112008" />
+    <state width="1899" height="594" key="GridCell.Tab.0.bottom" timestamp="1640947989256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="176" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640938745964" />
-    <state width="1899" height="176" key="GridCell.Tab.0.center" timestamp="1640938745963">
+    <state width="1899" height="594" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
+    <state width="1899" height="594" key="GridCell.Tab.0.center" timestamp="1640947989256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="176" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640938745963" />
-    <state width="1899" height="176" key="GridCell.Tab.0.left" timestamp="1640938745963">
+    <state width="1899" height="594" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
+    <state width="1899" height="594" key="GridCell.Tab.0.left" timestamp="1640947989255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="176" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640938745963" />
-    <state width="1899" height="176" key="GridCell.Tab.0.right" timestamp="1640938745964">
+    <state width="1899" height="594" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989255" />
+    <state width="1899" height="594" key="GridCell.Tab.0.right" timestamp="1640947989256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="176" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640938745964" />
-    <state width="1899" height="245" key="GridCell.Tab.1.bottom" timestamp="1640937248487">
+    <state width="1899" height="594" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
+    <state width="1899" height="301" key="GridCell.Tab.1.bottom" timestamp="1640946689761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640937248487" />
-    <state width="1899" height="245" key="GridCell.Tab.1.center" timestamp="1640937248486">
+    <state width="1899" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
+    <state width="1899" height="301" key="GridCell.Tab.1.center" timestamp="1640946689761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640937248486" />
-    <state width="1899" height="245" key="GridCell.Tab.1.left" timestamp="1640937248486">
+    <state width="1899" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
+    <state width="1899" height="301" key="GridCell.Tab.1.left" timestamp="1640946689761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640937248486" />
-    <state width="1899" height="245" key="GridCell.Tab.1.right" timestamp="1640937248486">
+    <state width="1899" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
+    <state width="1899" height="301" key="GridCell.Tab.1.right" timestamp="1640946689761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640937248486" />
+    <state width="1899" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1640249444182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
