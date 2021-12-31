@@ -83,6 +83,6 @@ if __name__ == '__main__':
     # print(len(find_dict))
     result_dict={}
     tmp = list()
-    with open("C:/Users/admin/Desktop/city_distribute.txt", "w") as fw:
+    # with open("C:/Users/admin/Desktop/city_distribute.txt", "w") as fw:
         # fw.write(str(json.dumps(find_dict)))
-        fw.write(str(find_dict))
+        # fw.write(str(find_dict))

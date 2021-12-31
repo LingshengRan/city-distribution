@@ -12,6 +12,7 @@ def Pic(data):
     return x, y
 
 def sample(data, sd):
+    # plt.figure()
     for i in range(len(data)):
         x, y = Pic(data[i])
         x.append(x[0])  # 增加第一个坐标使得矩形封闭
@@ -120,7 +121,7 @@ def sample(data, sd):
     Qi_y_list.append(Qi_y_list[0])
     # print(Qi_x_list)
     # print(Qi_y_list)
-    # plt.plot(Qi_x_list, Qi_y_list)
+    plt.plot(Qi_x_list, Qi_y_list, c='b')
     # plt.show()
 
     return Qi_x_list,Qi_y_list
@@ -129,6 +130,6 @@ def sample(data, sd):
 if __name__ == '__main__':
     data=[[(983.5,1751.5),(952.5,1751.5),(952.5,1698.5),(970.5,1698.5),(970.5,1692.0),(983.5,1692.0)]]
     # data = [[(10, 10), (10, 20), (15, 20), (15, 17), (30, 15), (25, 0), (20, 12)]]
-    sd = 5  # 安全距离
-    sample(data, sd)
+    outer_boundary = 2  # 安全距离
+    sample(data, outer_boundary)
 

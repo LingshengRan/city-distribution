@@ -1,6 +1,8 @@
 from matplotlib import pyplot as plt
-plt.rcParams['font.sans-serif']=['SimHei']
+
+plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
+
 
 def Pic(data):
     x = []
@@ -11,8 +13,9 @@ def Pic(data):
         y.append(data[i][1])
     return x, y
 
-def sample(data, sd, find_array, point, n):
-    plt.figure()
+
+def sample(data, sd, find_array, point, sample_num, path_array):
+
     for i in range(len(data)):
         x, y = Pic(data[i])
         x.append(x[0])  # 增加第一个坐标使得矩形封闭
@@ -116,24 +119,62 @@ def sample(data, sd, find_array, point, n):
     Qi_y_list.append(Qi_y_list[0])
     # print(Qi_x_list)
     # print(Qi_y_list)
-    plt.plot(Qi_x_list, Qi_y_list)
+    plt.plot(Qi_x_list, Qi_y_list, c='b')
 
+    # 找到的野点
+    if len(find_array)>0:
+        for p in find_array:
+            plt.scatter(p[0], p[1], marker='*', c='g')
 
-    # 坐标点
-    for p in find_array:
-        plt.scatter(p[0], p[1], marker= '*', c='g')
+    # 路径点
+    path_x_list = list()
+    path_y_list = list()
+    for p in path_array:
+        # if p == point:
+        #     path_x_list.clear()
+        #     path_y_list.clear()
+        #     path_x_list.append(p[0])
+        #     path_y_list.append(p[1])
+        # else:
+        #     path_x_list.append(p[0])
+        #     path_y_list.append(p[1])
+        plt.scatter(p[0], p[1], marker='.', c='b')
 
-    plt.scatter(point[0], point[1], marker='o', c='m')
+    # 中心点
+    plt.scatter(point[0], point[1], marker='o', c='r')
 
-    plt.savefig("C:/Users/admin/Desktop/test/"+ str(n) + ".png", dpi=100)
+    # 主城区
+    city_x_list = list()
+    city_y_list = list()
+
+    city_x_list.append(point[0] - 10)
+    city_y_list.append(point[1] - 13)
+
+    city_x_list.append(point[0] + 10)
+    city_y_list.append(point[1] - 13)
+
+    city_x_list.append(point[0] + 10)
+    city_y_list.append(point[1] + 13)
+
+    city_x_list.append(point[0] - 10)
+    city_y_list.append(point[1] + 13)
+
+    city_x_list.append(point[0] - 10)
+    city_y_list.append(point[1] - 13)
+
+    plt.plot(city_x_list, city_y_list,linestyle='--', c='m')
+
+    # plt.savefig("C:/Users/admin/Desktop/test/"+ str(sample_num) + ".png", dpi=100)
 
     # plt.show()
 
 
 if __name__ == '__main__':
-    data=[[(1802.0,1065.0),(1826.5,1065.0),(1826.5,1121.5),(1802.0,1121.5)]]
-    point = ()
-    find_array=[[]]
-    sd = 5  # 安全距离
-    sample(data, sd, find_array, point, n)
+    data = [[(1802.0, 1065.0), (1826.5, 1065.0), (1826.5, 1121.5), (1802.0, 1121.5)]]
+    point = (1815, 1100)
+    find_array = [[]]
+    outer_boundary = 2  # 距离势力范围边框2米
+    p2p = 4  # 点与点之间的最小距离为4米
 
+    sample_num = 0
+    sample(data, outer_boundary, find_array, point, sample_num)
