@@ -148,19 +148,19 @@ def sample(data, sd, find_array, point, sample_num, path_array):
     city_y_list = list()
 
     city_x_list.append(point[0] - 10)
-    city_y_list.append(point[1] - 13)
+    city_y_list.append(point[1] - 11)
 
     city_x_list.append(point[0] + 10)
-    city_y_list.append(point[1] - 13)
+    city_y_list.append(point[1] - 11)
 
     city_x_list.append(point[0] + 10)
-    city_y_list.append(point[1] + 13)
+    city_y_list.append(point[1] + 11)
 
     city_x_list.append(point[0] - 10)
-    city_y_list.append(point[1] + 13)
+    city_y_list.append(point[1] + 11)
 
     city_x_list.append(point[0] - 10)
-    city_y_list.append(point[1] - 13)
+    city_y_list.append(point[1] - 11)
 
     plt.plot(city_x_list, city_y_list,linestyle='--', c='m')
 

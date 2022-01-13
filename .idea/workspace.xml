@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="31d75020-4b73-443c-b099-0a69678f9d10" name="Default Changelist" comment="变更野怪资源点刷新规则">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIModelProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/AIModelProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/city_distributed_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/city_distributed_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +61,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.city_distributed_new">
-    <configuration name="city_distributed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="AIModelProcess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="city_distribution" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +73,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/city_distributed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AIModelProcess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,10 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.city_distributed_new" />
+        <item itemvalue="Python.AIModelProcess" />
         <item itemvalue="Python.zoom_out" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.result_view" />
-        <item itemvalue="Python.city_distributed" />
       </list>
     </recent_temporary>
   </component>
@@ -215,45 +217,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="161" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1640862277507" />
-    <state width="1081" height="466" key="DebuggerActiveHint" timestamp="1640946112008">
+    <state width="1453" height="466" key="DebuggerActiveHint" timestamp="1641989826197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1081" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1640946112008" />
-    <state width="1899" height="594" key="GridCell.Tab.0.bottom" timestamp="1640947989256">
+    <state width="1453" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1641989826197" />
+    <state width="1899" height="174" key="GridCell.Tab.0.bottom" timestamp="1642038365505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="594" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
-    <state width="1899" height="594" key="GridCell.Tab.0.center" timestamp="1640947989256">
+    <state width="1899" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642038365505" />
+    <state width="1899" height="174" key="GridCell.Tab.0.center" timestamp="1642038365505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="594" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
-    <state width="1899" height="594" key="GridCell.Tab.0.left" timestamp="1640947989255">
+    <state width="1899" height="174" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642038365505" />
+    <state width="1899" height="174" key="GridCell.Tab.0.left" timestamp="1642038365505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="594" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989255" />
-    <state width="1899" height="594" key="GridCell.Tab.0.right" timestamp="1640947989256">
+    <state width="1899" height="174" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642038365505" />
+    <state width="1899" height="174" key="GridCell.Tab.0.right" timestamp="1642038365505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="594" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640947989256" />
-    <state width="1899" height="301" key="GridCell.Tab.1.bottom" timestamp="1640946689761">
+    <state width="1899" height="174" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642038365505" />
+    <state width="1899" height="276" key="GridCell.Tab.1.bottom" timestamp="1641992977672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
-    <state width="1899" height="301" key="GridCell.Tab.1.center" timestamp="1640946689761">
+    <state width="1899" height="276" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641992977672" />
+    <state width="1899" height="276" key="GridCell.Tab.1.center" timestamp="1641992977672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
-    <state width="1899" height="301" key="GridCell.Tab.1.left" timestamp="1640946689761">
+    <state width="1899" height="276" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641992977672" />
+    <state width="1899" height="276" key="GridCell.Tab.1.left" timestamp="1641992977672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
-    <state width="1899" height="301" key="GridCell.Tab.1.right" timestamp="1640946689761">
+    <state width="1899" height="276" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641992977672" />
+    <state width="1899" height="276" key="GridCell.Tab.1.right" timestamp="1641992977672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640946689761" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1640249444182">
+    <state width="1899" height="276" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641992977672" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641976879524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1640249444182" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1641976879524" />
   </component>
 </project>
