@@ -15,6 +15,7 @@ import time
 import random
 import json
 
+
 def deal_path(outer_boundary, p2p_safe_distance, request_num):
     zoom_dict = {}
     find_dict = {}
@@ -22,28 +23,35 @@ def deal_path(outer_boundary, p2p_safe_distance, request_num):
 
     slot_outer = list()
     slot_inner = list()
-
-    with open("C:/Users/admin/Desktop/turning_point.txt", 'r', encoding='UTF-8-sig') as f:
+    with open("C:/Users/admin/Desktop/city_distribute.txt", 'r', encoding='UTF-8-sig') as f:
         for line in f.readlines():
             turning_point = eval(line.strip().replace("\n", "").replace("\r", "").split('\t')[0])
 
+    #数据结构 {(x,y):[[(x,y),(x,y)]]}
+    with open("C:/Users/admin/Desktop/turning_point.txt", 'r', encoding='UTF-8-sig') as f:
+        for line in f.readlines():
+            turning_point = eval(line.strip().replace("\n", "").replace("\r", "").split('\t')[0])
+    #数据结构 {(x,y):[(x,y),(x,y)]}
     with open("C:/Users/admin/Desktop/path_point.txt", 'r', encoding='UTF-8-sig') as f:
         for line in f.readlines():
             path_point = eval(line.strip().replace("\n", "").replace("\r", "").split('\t')[0])
 
-    # 全局无效区域范围内外 8 米
+    # 全局无效区域范围内外 20 米 注意：顺时针和逆时针的方向不一致，缩进方向不一致
     for slot in invalid_area:
-        outer_x, outer_y = zoom_out.sample(invalid_area.get(slot), -8)
+        slot_outer_mid = list()
+        slot_inner_mid = list()
+        outer_x, outer_y = zoom_out.sample(invalid_area.get(slot), 20)
+        inner_x, inner_y = zoom_out.sample(invalid_area.get(slot), -20)
         for out in range(len(outer_x)):
-            slot_outer.append((outer_x[out], outer_y[out]))
-
-        inner_x, inner_y = zoom_out.sample(invalid_area.get(slot), 8)
+            slot_outer_mid.append((outer_x[out], outer_y[out]))
         for inn in range(len(inner_x)):
-            slot_inner.append((inner_x[inn], inner_y[inn]))
+            slot_inner_mid.append((inner_x[inn], inner_y[inn]))
+        slot_outer.append(slot_outer_mid)
+        slot_inner.append(slot_inner_mid)
 
     for center_point in turning_point:
 
-        if sample_num not in (62,228,766,1183,1335,1695,1700,1863,2024,2153,2264,2324,2484,2623,2771,2798,2960,3085,3223,3432,3502,3540,3684,3752,3859,3880):
+        if sample_num not in (206,2390,3033):
             sample_num += 1
             continue
 
@@ -70,20 +78,27 @@ def deal_path(outer_boundary, p2p_safe_distance, request_num):
             zoom_dict[center_point] = zoom_array
 
             # 求出终点坐标 e_x = d * cos; e_y = d * sin
-            while len(find_array) < 4 and center_point_distance > 0 and center_point_distance<50:
+            while len(find_array) < 4 and center_point_distance > 0 and center_point_distance<40:
                 r = 90  # 角度
                 while len(find_array) < 4 and r > 0:
-                    r -= 89.5
+                    r -= 89
                     # print(r)
                     find_cnt, find_array = find_point(center_point, r, zoom_array, center_point_distance, request_num, p2p_safe_distance, path_array, city_list, find_array, slot_outer, slot_inner)
-                center_point_distance += 0.1 #每0.1米搜索一次
+                center_point_distance += 0.1 #每3米搜索一次
+
+            # if len(boundary[0]) != 4:
+            # result_view.sample(boundary, outer_boundary, find_array, center_point, sample_num, path_array)
+            # result_view.plt.savefig("C:/Users/admin/Desktop/test2/" + str(sample_num) + ".png", dpi=1000)
+
+            # if len(find_array) == 4 and len(boundary[0]) != 4:
+            result_view.sample(boundary, outer_boundary, find_array, center_point, sample_num, path_array)
+            result_view.plt.savefig("C:/Users/admin/Desktop/test2/" + str(sample_num) + ".png", dpi=100)
 
             if len(find_array) != 4:
                 result_view.sample(boundary, outer_boundary, find_array, center_point, sample_num, path_array)
-                result_view.plt.savefig("C:/Users/admin/Desktop/test/" + str(sample_num) + ".png", dpi=1000)
-                # result_view.plt.show()
+                result_view.plt.savefig("C:/Users/admin/Desktop/test3/" + str(sample_num) + ".png", dpi=100)
                 print(sample_num)
-                # print(r, len(find_array))
+
             else:
                 # {"城池ID": ["坐标X,坐标Y", "坐标X,坐标Y", "坐标X,坐标Y", "坐标X,坐标Y"]}
 
@@ -92,12 +107,9 @@ def deal_path(outer_boundary, p2p_safe_distance, request_num):
                     find_list.append(str(i[0])+','+str(i[1]))
                 find_dict[str(sample_num)] = find_list
             # if sample_num%100==0:
-            #     print(sample_num)
+            #     print("=====", sample_num)
 
             # result_view.sample(boundary, outer_boundary, find_array, center_point, sample_num, path_array)
-
-            # print(find_dict)
-            # result_view.plt.close()
             # result_view.plt.savefig("C:/Users/admin/Desktop/test/" + str(sample_num) + ".png", dpi=1000)
             # result_view.plt.show()
             sample_num += 1
@@ -109,8 +121,8 @@ def deal_path(outer_boundary, p2p_safe_distance, request_num):
 def find_point(center_point, r, zoom_array, center_point_distance, request_num, p2p_safe_distance, path_array, city_list, find_array, slot_outer, slot_inner):
     re = 0  # 起始角度
     find_cnt = len(find_array)
-    # max = int(360 / r)
-    max = 721
+    max = int(360 / r) + 2
+    # max = 721
     for seg in range(1, max):
         if find_cnt < request_num:
             e_x = round(center_point[0] + center_point_distance * math.cos(math.radians(re)), 1)
@@ -118,8 +130,13 @@ def find_point(center_point, r, zoom_array, center_point_distance, request_num, 
             re += r
             # 不在主城区内 且在势力安全范围内 # 点与点之间的最小距离为4米 已选的点+路径上的点
             if valide_within.isPoiWithinPoly((e_x, e_y), [city_list]) is False and valide_within.isPoiWithinPoly((e_x, e_y), [zoom_array]) and safe_verify((e_x, e_y), find_array, p2p_safe_distance, path_array):
-                # 不在区块无效区域
-                if (valide_within.isPoiWithinPoly((e_x, e_y), [slot_outer]) and (valide_within.isPoiWithinPoly((e_x, e_y), [slot_inner]) is False)) is False:
+                # 循环判定不在区块无效区域
+                flag=False
+                for i in range(0, len(slot_outer)):
+                    if (valide_within.isPoiWithinPoly((e_x, e_y), [slot_outer[i]]) and (valide_within.isPoiWithinPoly((e_x, e_y), [slot_inner[i]]) is False)):
+                        flag=True #在无效区域
+                        break
+                if flag is False:
                     find_array.append((e_x, e_y))
                     find_cnt += 1
     return find_cnt, find_array
@@ -149,20 +166,20 @@ if __name__ == '__main__':
     # 1、长方形：长度距离中心点10米，宽度距离中心点13米 可调至11米
     # 2、距离势力范围边框4米
     # 3、点与点之间的最小距离为4米
-    # 4、点的数量更变为了4个。
+    # 4、点的数量更变为了4个
     # 5、去除路上的点位，以路上的坐标点半径4米内，不要生成点。
     # 6、区块里外8米不可刷点
 
     # center_point_distance = 10.1  # 1、长方形：长度距离中心点10米，宽度距离中心点13米 可调至11米
-    outer_boundary = 4  # 2、距离势力范围边框4米 不可调
-    p2p_safe_distance = 4  # 3、点与点之间的最小距离为4米
+    outer_boundary = 3  # 2、距离势力范围边框4米 可以调成3
+    p2p_safe_distance = 3  # 3、点与点之间的最小距离为4米 可以调成3
     request_num = 4  # 4、点的数量更变为了4个。
-
-
 
     find_dict = deal_path(outer_boundary, p2p_safe_distance, request_num)
     # print(len(find_dict))
     result_dict = {}
     tmp = list()
-    with open("C:/Users/admin/Desktop/city_distribute_26.txt", "w") as fw:
+    with open("C:/Users/admin/Desktop/city_distribute_add.txt", "w") as fw:
         fw.write(str(json.dumps(find_dict)))
+
+

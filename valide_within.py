@@ -4,7 +4,7 @@ Created on 2021/11/19 17:15
 
 @author: R.ls
 """
-
+from matplotlib import pyplot as plt
 
 def isRayIntersectsSegment(poi,s_poi,e_poi): #[x,y] [lng,lat]
     #输入：判断点，边起点，边终点，都是[lng,lat]格式数组
@@ -44,9 +44,21 @@ def isPoiWithinPoly(poi,poly):
     return True if sinsc%2==1 else  False
 
 if __name__ == '__main__':
-    poi=(550, 610)
-    poly=[[(526.5,586.0),(567.5,586.0),(567.5,633.5),(526.5,633.5)]]
+    poi=[540.4, 1051.8]
+    poly=[[[720.0, 1280.0], [720.0, 1480.0], [960.0, 1480.0], [960.0, 1040.0], [520.0, 1040.0], [520.0, 1280.0], [720.0, 1280.0]]]
     within_poly= isPoiWithinPoly(poi, poly)
+    if isPoiWithinPoly((540.4, 1051.8), poly):
+        print("=============")
+    plt.figure()
+    outer_x=list()
+    outer_y=list()
+    for list_p in poly:
+        for p in list_p:
+            outer_x.append(p[0])
+            outer_y.append(p[1])
+    plt.plot(outer_x, outer_y, c='r')
+    plt.scatter(540.4, 1051.8, marker='o', c='r')
     print(within_poly)
+    plt.show()
 
 

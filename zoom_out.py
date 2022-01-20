@@ -18,7 +18,7 @@ def sample(data, sd):
         x.append(x[0])  # 增加第一个坐标使得矩形封闭
         y.append(y[0])
 
-        plt.plot(x, y, c='r')
+        plt.plot(x, y, c='r',linewidth=1)
 
     x.append(x[1])
 
@@ -121,15 +121,19 @@ def sample(data, sd):
     Qi_y_list.append(Qi_y_list[0])
     # print(Qi_x_list)
     # print(Qi_y_list)
-    plt.plot(Qi_x_list, Qi_y_list, c='b')
+    plt.plot(Qi_x_list, Qi_y_list, c='b', linewidth=1)
     # plt.show()
 
     return Qi_x_list,Qi_y_list
 
 
 if __name__ == '__main__':
-    data=[[(983.5,1751.5),(952.5,1751.5),(952.5,1698.5),(970.5,1698.5),(970.5,1692.0),(983.5,1692.0)]]
+    data=[[(526.5,586.0),(567.5,586.0),(567.5,633.5),(526.5,633.5)]]
+    data2=[[(640, 860), (840, 860), (840, 560), (640, 560)]]
     # data = [[(10, 10), (10, 20), (15, 20), (15, 17), (30, 15), (25, 0), (20, 12)]]
-    outer_boundary = 2  # 安全距离
+    outer_boundary = 4  # 安全距离
     sample(data, outer_boundary)
+    sample(data2, outer_boundary)
 
+# (553,607):[[(526.5,586.0),(567.5,586.0),(567.5,633.5),(526.5,633.5)]],
+#
