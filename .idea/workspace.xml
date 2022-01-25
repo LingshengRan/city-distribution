@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31d75020-4b73-443c-b099-0a69678f9d10" name="Default Changelist" comment="变更野怪资源点刷新规则">
-      <change afterPath="$PROJECT_DIR$/valid_within_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AIModelProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/AIModelProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/city_distributed_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/city_distributed_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valide_within.py" beforeDir="false" afterPath="$PROJECT_DIR$/valide_within.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoom_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/zoom_out.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,28 @@
       <recent name="C:\Users\admin\Desktop\python\city_distribution" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.AIModelProcess">
+    <configuration name="AIModelProcess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="city_distribution" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AIModelProcess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="city_distributed_new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="city_distribution" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,34 +164,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zoom_out" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="city_distribution" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zoom_out.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AIModelProcess" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.city_distributed_new" />
         <item itemvalue="Python.valide_within" />
         <item itemvalue="Python.valid_within_v2" />
-        <item itemvalue="Python.zoom_out" />
       </list>
     </recent_temporary>
   </component>
@@ -224,46 +219,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="222" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1642583548031" />
-    <state width="1477" height="466" key="DebuggerActiveHint" timestamp="1642582708738">
+    <state width="1477" height="466" key="DebuggerActiveHint" timestamp="1642672512208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1477" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1642582708738" />
-    <state width="1899" height="204" key="GridCell.Tab.0.bottom" timestamp="1642595110854">
+    <state width="1477" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1642672512208" />
+    <state width="1899" height="425" key="GridCell.Tab.0.bottom" timestamp="1642675804165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="204" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642595110854" />
-    <state width="1899" height="204" key="GridCell.Tab.0.center" timestamp="1642595110854">
+    <state width="1899" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642675804165" />
+    <state width="1899" height="425" key="GridCell.Tab.0.center" timestamp="1642675804165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="204" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642595110854" />
-    <state width="1899" height="204" key="GridCell.Tab.0.left" timestamp="1642595110854">
+    <state width="1899" height="425" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642675804165" />
+    <state width="1899" height="425" key="GridCell.Tab.0.left" timestamp="1642675804165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="204" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642595110854" />
-    <state width="1899" height="204" key="GridCell.Tab.0.right" timestamp="1642595110854">
+    <state width="1899" height="425" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642675804165" />
+    <state width="1899" height="425" key="GridCell.Tab.0.right" timestamp="1642675804165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="204" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642595110854" />
-    <state width="1899" height="220" key="GridCell.Tab.1.bottom" timestamp="1642589645205">
+    <state width="1899" height="425" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642675804165" />
+    <state width="1899" height="100" key="GridCell.Tab.1.bottom" timestamp="1642673412804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="220" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642589645205" />
-    <state width="1899" height="220" key="GridCell.Tab.1.center" timestamp="1642589645205">
+    <state width="1899" height="100" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642673412804" />
+    <state width="1899" height="100" key="GridCell.Tab.1.center" timestamp="1642673412803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="220" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642589645205" />
-    <state width="1899" height="220" key="GridCell.Tab.1.left" timestamp="1642589645205">
+    <state width="1899" height="100" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642673412803" />
+    <state width="1899" height="100" key="GridCell.Tab.1.left" timestamp="1642673412803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="220" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642589645205" />
-    <state width="1899" height="220" key="GridCell.Tab.1.right" timestamp="1642589645205">
+    <state width="1899" height="100" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642673412803" />
+    <state width="1899" height="100" key="GridCell.Tab.1.right" timestamp="1642673412803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="220" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642589645205" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641976879524">
+    <state width="1899" height="100" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642673412803" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1642668769351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1641976879524" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1642668769351" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -277,6 +272,11 @@
           <url>file://$PROJECT_DIR$/city_distributed_new.py</url>
           <line>30</line>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AIModelProcess.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
